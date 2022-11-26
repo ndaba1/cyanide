@@ -1,21 +1,24 @@
-import React from 'react'
-import Split from "react-split-grid"
+import Split from "react-split";
+import Editor from "./components/Editor";
+import ExplorerMenu from "./components/ExplorerMenu";
+import TreeView from "./components/TreeView";
 
 export default function App() {
   return (
-    <div className='w-screen h-screen'>
-      <Split
-    render={({
-        getGridProps,
-        getGutterProps,
-    }) => (
-        <div className="grid" {...getGridProps()}>
-            <div />
-            <div className="gutter-col gutter-col-1" {...getGutterProps('column', 1)} />
-            <div />
-        </div>
-    )}
-/>
-    </div>
-  )
+    <Split
+      className="flex flex-row"
+      gutterAlign="end"
+      snapOffset={1}
+      sizes={[20, 80]}
+      gutterSize={5}
+      cursor={"ew-resize"}
+    >
+      <div className="w-60 h-screen overflow-hidden border-r">
+        <ExplorerMenu />
+        <TreeView />
+      </div>
+      <Editor />
+    </Split>
+    // <Workspace />
+  );
 }
