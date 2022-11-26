@@ -1,0 +1,17 @@
+@import "./tailwind.css";
+
+.gutter {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transition: 0s 0.4s all step-end;
+}
+
+.gutter:hover {
+  background-color: #24c8db;
+}
+
+.gutter.gutter-horizontal {
+  /* background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg=="); */
+  cursor: ew-resize;
+}
